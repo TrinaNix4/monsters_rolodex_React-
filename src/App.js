@@ -3,14 +3,21 @@ import "./App.css";
 import { Component } from "react";
 
 class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      //give it a key-value pair here
+      name: "Jack",
+    };
+  }
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
+          <p>Hello {this.state.name}</p>
+          <button>Change Name</button>
           <a
             className="App-link"
             href="https://reactjs.org"
